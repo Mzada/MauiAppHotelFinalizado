@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotelFinalizado.View.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Gray950}">
+    
+    <VerticalStackLayout Spacing="100">
+        <Label Text="Sobre nosso Hotel" HorizontalTextAlignment="Center" FontFamily="Monda" FontSize="20"/>
+
+        <Label Text="O Hotel é um refúgio de luxo e elegância em Sorocaba, onde cada detalhe é pensado para proporcionar uma experiência inesquecível. Com suítes sofisticadas, gastronomia de alto nível e um spa completo para relaxamentonossos hóspedes desfrutam de conforto, exclusividade e atendimento personalizado Seja para negócios ou lazer, nosso Hotel combina excelência em hospitalidade com um ambiente único e inspirador." 
+               HorizontalTextAlignment="Center"
+               FontFamily="Monda"
+               FontSize="16"
+               Margin="10"/>
+        <Button Clicked="Button_Clicked" Text="Voltar" Margin="40" BackgroundColor="{StaticResource White}"/>
+        <Label Text="Desenvolvido por Mzada / 2024" FontFamily="Monda" HorizontalTextAlignment="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotelFinalizado.View.HospedagemContratada"
+             NavigationPage.HasNavigationBar="False"
+             Background="{StaticResource Gray950}">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <Label Text="{Binding QuartoSelecionado.Descricao}" 
+               TextColor="{StaticResource White}"
+               FontFamily="MondaBold"
+               FontSize="40"
+               HorizontalTextAlignment="Center"/>
+
+        <Frame Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                    <Label Text="Adultos: "/>
+                    <Label Text="{Binding QuantidadeAdultos}" TextColor="{StaticResource White}" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                    <Label Text="Crianças: "/>
+                    <Label Text="{Binding QuantidadeCriancas}" TextColor="{StaticResource White}" />
+                </HorizontalStackLayout>
+            </StackLayout>
+        </Frame>
+
+        <Frame Margin="10">
+            <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto, Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text="Check In: "/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Check Out: "/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia: "/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckin, StringFormat='{}{0:dd/MM/yyyy}'}" TextColor="{StaticResource White}"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckout, StringFormat='{}{0:dd/MM/yyyy}'}" TextColor="{StaticResource White}"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}"     TextColor="{StaticResource White}"/>
+            </Grid>
+        </Frame>
+
+        <Frame Margin="10">
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Valor Total: " />
+                <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'}" TextColor="{StaticResource White}"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar" HorizontalOptions="Center" Clicked="Button_Clicked" BackgroundColor="{StaticResource White}"/>
+    </VerticalStackLayout>
+</ContentPage>
